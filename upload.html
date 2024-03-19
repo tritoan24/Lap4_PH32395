@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- liên kết link bootstrap giúp tôi -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-container img {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body 
+class="container"
+>
+
+    <div
+    >
+
+        <h1>Upload File</h1>
+
+        <form action="/uploadfile" method="post" enctype="multipart/form-data" class="form-group">
+            Chon file: <input type="file" name="myfile" accept="image/*" 
+            >
+            <button type="submit" class="btn btn-primary">Upload File</button>
+        </form>
+
+        <h1>Chọn nhiều ảnh</h1>
+        <form action="/uploadmultiple" enctype="multipart/form-data" method="POST"  class="form-group">
+            Chon file: <input type="file" name="myFiles" multiple>
+            <input type="submit" value="Upload your files" 
+            class = "btn btn-primary" 
+            />
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>
